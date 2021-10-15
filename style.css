@@ -1,0 +1,21 @@
+body {
+  background-color: #000000;
+  font-family: sans-serif;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+}
+h1{
+  font-size: 2rem;
+  font-weight: 700;
+}
+.time {
+  font-size: 1.5rem;
+}
