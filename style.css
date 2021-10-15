@@ -10,12 +10,20 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-direction: column;
   padding: 50px;
 }
 h1{
   font-size: 2rem;
   font-weight: 700;
 }
-.time {
+.eventTime {
   font-size: 1.5rem;
+}
+
+
+.time-wrap {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
 }
