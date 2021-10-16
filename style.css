@@ -30,7 +30,7 @@ body {
   flex-direction: column;
   font-family: 'Neoneon';
   line-height: 1.2;
-
+  height: 100vh;
   animation: flux 2s linear infinite;
   -moz-animation: flux 2s linear infinite;
   -webkit-animation: flux 2s linear infinite;
