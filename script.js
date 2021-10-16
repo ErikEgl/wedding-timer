@@ -59,53 +59,23 @@ let cDay = 6;
       hours = hours < 10 ? '0' + hours : hours;
       minutes = minutes < 10 ? '0' + minutes : minutes;
       seconds = seconds < 10 ? '0' + seconds : seconds;
-    
-      $mo.textContent = months
-      $d.textContent = days
-      $h.textContent = hours
-      $mi.textContent = minutes
-      $s.textContent = seconds
+     
+      function declOfNum(n, text_forms) {  
+        n = Math.abs(n) % 100; 
+        var n1 = n % 10;
+        if (n > 10 && n < 20) { return text_forms[2]; }
+        if (n1 > 1 && n1 < 5) { return text_forms[1]; }
+        if (n1 == 1) { return text_forms[0]; }
+        return text_forms[2];
+      }
 
-      // function checkEnding (time, word, arrName) {
-      //   if(time === 1) {
-      //     word.textContent = arrName[0]
-      //   } else if (time >=2 && time < 5){
-      //     word.textContent = arrName[1]
-      //   } else {
-      //     word.textContent = arrName[2]
-      //   }
-      // }
+      $mo.textContent = months + declOfNum(months, [" месяц", " месяца", " месяцев"]);
+      $d.textContent = days + declOfNum(days, [" день", " дня", " дней"]);
+      $h.textContent = hours + declOfNum(hours, [" час", " часа", " часов"]);
+      $mi.textContent = minutes + declOfNum(minutes, [" минута", " минуты", " минут"]);
+      $s.textContent = seconds + declOfNum(seconds, [" секунда", " секунды", " секунд"]);
 
-      // checkEnding(months ,wordEndMonthsW, monthsArr)
-      // checkEnding(months ,wordEndMonthsC, monthsArr)
-
-
-    //   function checkEnding() {
-    //     var num, result;
-    //     num = months;
-    
-    //     var string = num.toString();
-    //     var char = string.charAt(string.length-1);
-    
-    //     if (char == "1" && !(num == 11)) {
-    //         result = num + " пользователь в сети1.";
-    //     }  
-    //     else if (char == "2" && !(num == 12)) {
-    //         result = num + " пользователя в сети2.";
-    //     }
-    //     else if (char == "3" && !(num == 13)) {
-    //         result = num + " пользователя в сети3.";
-    //     }
-    //     else if (char == "4" && !(num == 14)) {
-    //         result = num + " пользователя в сети4.";
-    //     }  
-    //     else {
-    //         result = num + " пользователей в сети5.";
-    //     }
-    
-    //     wordEndMonthsW.innerHTML = result;     
-    // }  
-    // checkEnding() 
+  
   }
   msCount(weddingDay, wMonths, wDays, wHours, wMinutes, wSeconds)
   msCount(comingDay, cMonths, cDays, cHours, cMinutes, cSeconds)
@@ -113,3 +83,4 @@ let cDay = 6;
 }
 clock();
 setInterval(clock, 1000);
+
