@@ -86,10 +86,17 @@ setInterval(clock, 1000);
 
 
 
-
+//after party btn click toggle textcontent
 const partyBtn = document.querySelector('button[data-party]')
-
-
+const partyBtnTextContent = partyBtn.textContent
+function textContentToggle() {
+  if (partyBtn.textContent === partyBtnTextContent) {
+    partyBtn.innerHTML = "CLICK FOR REGULAR MODE";
+  } else {
+    partyBtn.innerHTML = partyBtnTextContent;
+  }
+}
+//after party btn click add party styles to text
 partyBtn.addEventListener('click', () => {
   const body = document.querySelector('body')
   const h1 = document.querySelectorAll('h1')
@@ -97,6 +104,7 @@ partyBtn.addEventListener('click', () => {
   h1.forEach(item => {
     item.classList.toggle('h1-party')
   })
+  textContentToggle()
 })
 
 
