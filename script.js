@@ -97,9 +97,15 @@ function textContentToggle() {
   }
 }
 //after party btn click add party styles to text
+const body = document.querySelector('body')
+const h1 = document.querySelectorAll('h1')
 partyBtn.addEventListener('click', () => {
-  const body = document.querySelector('body')
-  const h1 = document.querySelectorAll('h1')
+  
+  if (localStorage.getItem('visited')) {
+    localStorage.removeItem('visited')
+  } else {
+    localStorage.setItem('visited', JSON.stringify(true))
+    }
   body.classList.toggle('party')
   h1.forEach(item => {
     item.classList.toggle('h1-party')
@@ -108,3 +114,8 @@ partyBtn.addEventListener('click', () => {
 })
 
 
+if (localStorage.getItem('visited')) {
+  body.classList.add('visited-page')
+} else {
+  body.classList.remove('visited-page')
+}
