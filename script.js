@@ -31,12 +31,15 @@ function clock() {
 let wYear = 2022;
 let wMonth = 1;
 let wDay = 26;
+let wHour = 12;
+
 
 let cYear = 2021;
 let cMonth = 11;
 let cDay = 6;
-  let weddingDay = new Date(wYear, wMonth, wDay);
-  let comingDay = new Date(cYear, cMonth, cDay);
+let cHour = 12;
+let weddingDay = new Date(wYear, wMonth, wDay, wHour);
+let comingDay = new Date(cYear, cMonth, cDay, cHour);
 
 
 
