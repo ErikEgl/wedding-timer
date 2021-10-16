@@ -81,3 +81,19 @@ let cDay = 6;
 clock();
 setInterval(clock, 1000);
 
+
+
+
+const partyBtn = document.querySelector('button[data-party]')
+
+
+partyBtn.addEventListener('click', () => {
+  const body = document.querySelector('body')
+  const h1 = document.querySelectorAll('h1')
+  body.classList.toggle('party')
+  h1.forEach(item => {
+    item.classList.toggle('h1-party')
+  })
+})
+
+

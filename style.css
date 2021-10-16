@@ -15,6 +15,9 @@
     url('https://nomail.com.ua/files/woff/ad132d25bb87a05287ee248b1f309b8f.woff')
       format('woff');
 }
+* {
+  font-family: 'Neoneon';
+}
 
 body {
   background-color: black;
@@ -28,9 +31,12 @@ body {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  font-family: 'Neoneon';
+
   line-height: 1.2;
   height: 100vh;
+
+}
+.party {
   animation: flux 2s linear infinite;
   -moz-animation: flux 2s linear infinite;
   -webkit-animation: flux 2s linear infinite;
@@ -41,6 +47,9 @@ h1 {
   font-weight: 700;
   color: #fff;
   text-align: center;
+  color: #fed128;
+}
+.h1-party {
   animation: neon 1s ease infinite;
   -moz-animation: neon 1s ease infinite;
   -webkit-animation: neon 1s ease infinite;
@@ -55,7 +64,12 @@ h1 {
   display: flex;
   flex-direction: column;
 }
-
+.party-mode {
+  background-color: black;
+  color: white;
+  font-size: 2rem;
+  box-shadow: 0 0 9vw #fa1c16, 0 0 0.4vw #fed128, 0vw 0vw 0vw #806914;
+}
 @media only screen and (max-width: 500px) {
   .time-wrap {
     padding: 10px;
