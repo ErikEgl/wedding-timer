@@ -1,7 +1,23 @@
+@font-face {
+  font-family: 'fontad132d25bb87a05287ee248b1f309b8f';
+
+  src: url('https://nomail.com.ua/files/eot/ad132d25bb87a05287ee248b1f309b8f.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://nomail.com.ua/files/woff/ad132d25bb87a05287ee248b1f309b8f.woff')
+      format('woff'),
+    url('https://nomail.com.ua/files/woff2/ad132d25bb87a05287ee248b1f309b8f.woff2')
+      format('woff2');
+}
+
+@font-face {
+  font-family: 'Neoneon';
+  src: local('Neoneon'),
+    url('https://nomail.com.ua/files/woff/ad132d25bb87a05287ee248b1f309b8f.woff')
+      format('woff');
+}
+
 body {
-  /* background: rgb(63,94,251);
-background: radial-gradient(circle, #4b6cb7 0%, #182848 100%); */
-background-color: black;
+  background-color: black;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   margin: 0;
@@ -12,29 +28,32 @@ background-color: black;
   align-items: center;
   text-align: center;
   flex-direction: column;
-  font-family: 'Parisienne', cursive;
+  font-family: 'Neoneon';
+  line-height: 1.2;
 
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
 }
-h1{
+h1 {
   font-size: 2rem;
   font-weight: 700;
   color: #fff;
   text-align: center;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
 }
 .eventTime {
   font-size: 2rem;
   font-weight: 700;
 }
 
-
 .time-wrap {
   padding: 50px;
   display: flex;
   flex-direction: column;
-  
 }
 
 @media only screen and (max-width: 500px) {
@@ -43,11 +62,30 @@ h1{
   }
 }
 
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #fa1c16, 0 0 3vw #fa1c16, 0 0 10vw #fa1c16,
+      0 0 10vw #fa1c16, 0 0 0.4vw #fed128, 0.5vw 0.5vw 0.1vw #806914;
+    color: #fed128;
   }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  50% {
+    text-shadow: 0 0 0.5vw #800e0b, 0 0 1.5vw #800e0b, 0 0 5vw #800e0b,
+      0 0 5vw #800e0b, 0 0 0.2vw #800e0b, 0.5vw 0.5vw 0.1vw #40340a;
+    color: #806914;
+  }
+}
+
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041ff, 0 0 3vw #1041ff, 0 0 10vw #1041ff,
+      0 0 10vw #1041ff, 0 0 0.4vw #8bfdfe, 0.5vw 0.5vw 0.1vw #147280;
+    color: #28d7fe;
+  }
+  50% {
+    text-shadow: 0 0 0.5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180,
+      0 0 5vw #082180, 0 0 0.2vw #082180, 0.5vw 0.5vw 0.1vw #0a3940;
+    color: #146c80;
   }
 }
