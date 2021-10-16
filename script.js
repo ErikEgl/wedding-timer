@@ -10,8 +10,6 @@ const cHours = document.querySelector('span[data-cHours]');
 const cMinutes = document.querySelector('span[data-cMinutes]');
 const cSeconds = document.querySelector('span[data-cSeconds]');
 
-
-
 const wordEndMonthsW = document.querySelector('span[data-wordEnd-wmonth]');
 const wordEndDaysW = document.querySelector('span[data-wordEnd-wday]');
 const wordEndHoursW = document.querySelector('span[data-wordEnd-whour]');
@@ -24,104 +22,107 @@ const wordEndHoursC = document.querySelector('span[data-wordEnd-chour]');
 const wordEndMinutesC = document.querySelector('span[data-wordEnd-cminute]');
 const wordEndSecondsC = document.querySelector('span[data-wordEnd-csecond]');
 
-
 function clock() {
   let currentTime = new Date();
 
-let wYear = 2022;
-let wMonth = 1;
-let wDay = 26;
-let wHour = 12;
+  let wYear = 2022;
+  let wMonth = 1;
+  let wDay = 26;
+  let wHour = 12;
 
-
-let cYear = 2021;
-let cMonth = 11;
-let cDay = 6;
-let cHour = 12;
-let weddingDay = new Date(wYear, wMonth, wDay, wHour);
-let comingDay = new Date(cYear, cMonth, cDay, cHour);
-
-
-
+  let cYear = 2021;
+  let cMonth = 11;
+  let cDay = 6;
+  let cHour = 12;
+  let weddingDay = new Date(wYear, wMonth, wDay, wHour);
+  let comingDay = new Date(cYear, cMonth, cDay, cHour);
 
   function msCount(msEvent, $mo, $d, $h, $mi, $s) {
     let millisecondsTillComing = msEvent - currentTime;
-    let months = parseInt((millisecondsTillComing / (1000 * 60 * 60 * 24 * 30)) % 12);
+    let months = parseInt(
+      (millisecondsTillComing / (1000 * 60 * 60 * 24 * 30)) % 12
+    );
     let days = parseInt((millisecondsTillComing / (1000 * 60 * 60 * 24)) % 30);
     let hours = parseInt((millisecondsTillComing / (1000 * 60 * 60)) % 24);
     let minutes = parseInt((millisecondsTillComing / (1000 * 60)) % 60);
     let seconds = parseInt((millisecondsTillComing / 1000) % 60);
 
-
     //add zero, if <10
-      hours = hours < 10 ? '0' + hours : hours;
-      minutes = minutes < 10 ? '0' + minutes : minutes;
-      seconds = seconds < 10 ? '0' + seconds : seconds;
-     
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
 
     //declension of numerical values
-      function declOfNum(n, text_forms) {  
-        n = Math.abs(n) % 100; 
-        let n1 = n % 10;
-        if (n > 10 && n < 20) { return text_forms[2]; }
-        if (n1 > 1 && n1 < 5) { return text_forms[1]; }
-        if (n1 == 1) { return text_forms[0]; }
+    function declOfNum(n, text_forms) {
+      n = Math.abs(n) % 100;
+      let n1 = n % 10;
+      if (n > 10 && n < 20) {
         return text_forms[2];
       }
+      if (n1 > 1 && n1 < 5) {
+        return text_forms[1];
+      }
+      if (n1 == 1) {
+        return text_forms[0];
+      }
+      return text_forms[2];
+    }
 
-      $mo.textContent = months + declOfNum(months, [" месяц", " месяца", " месяцев"]);
-      $d.textContent = days + declOfNum(days, [" день", " дня", " дней"]);
-      $h.textContent = hours + declOfNum(hours, [" час", " часа", " часов"]);
-      $mi.textContent = minutes + declOfNum(minutes, [" минута", " минуты", " минут"]);
-      $s.textContent = seconds + declOfNum(seconds, [" секунда", " секунды", " секунд"]);
-
-  
+    $mo.textContent =
+      months + declOfNum(months, [' месяц', ' месяца', ' месяцев']);
+    $d.textContent = days + declOfNum(days, [' день', ' дня', ' дней']);
+    $h.textContent = hours + declOfNum(hours, [' час', ' часа', ' часов']);
+    $mi.textContent =
+      minutes + declOfNum(minutes, [' минута', ' минуты', ' минут']);
+    $s.textContent =
+      seconds + declOfNum(seconds, [' секунда', ' секунды', ' секунд']);
   }
-  msCount(weddingDay, wMonths, wDays, wHours, wMinutes, wSeconds)
-  msCount(comingDay, cMonths, cDays, cHours, cMinutes, cSeconds)
-
+  msCount(weddingDay, wMonths, wDays, wHours, wMinutes, wSeconds);
+  msCount(comingDay, cMonths, cDays, cHours, cMinutes, cSeconds);
 }
 clock();
 setInterval(clock, 1000);
 
-
-
 //after party btn click toggle textcontent
-const partyBtn = document.querySelector('button[data-party]')
-const partyBtnTextContent = partyBtn.textContent
+const partyBtn = document.querySelector('button[data-party]');
+const partyBtnTextContent = partyBtn.textContent;
 function textContentToggle() {
   if (partyBtn.textContent === partyBtnTextContent) {
-    partyBtn.innerHTML = "CLICK FOR REGULAR MODE";
+    partyBtn.innerHTML = 'Нажми для обычного режима';
   } else {
     partyBtn.innerHTML = partyBtnTextContent;
   }
 }
 //after party btn click add party styles to text
-const body = document.querySelector('body')
-const h1 = document.querySelectorAll('h1')
+const body = document.querySelector('body');
+const h1 = document.querySelectorAll('h1');
 partyBtn.addEventListener('click', () => {
-  
   if (localStorage.getItem('visited')) {
-    localStorage.removeItem('visited')
+    localStorage.removeItem('visited');
   } else {
-    localStorage.setItem('visited', JSON.stringify(true))
-    }
-  body.classList.toggle('party')
+    localStorage.setItem('visited', JSON.stringify(true));
+  }
+  body.classList.toggle('party');
   h1.forEach(item => {
-    item.classList.toggle('h1-party')
-  })
-  textContentToggle()
-})
-
+    item.classList.toggle('h1-party');
+  });
+  textContentToggle();
+});
 
 if (localStorage.getItem('visited')) {
-  body.classList.add('party')
+  body.classList.add('party');
   h1.forEach(item => {
-    item.classList.add('h1-party')
-  })
+    item.classList.add('h1-party');
+  });
 } else {
-  body.classList.remove('party')
+  body.classList.remove('party');
   h1.forEach(item => {
-    item.classList.remove('h1-party')
-  })
+    item.classList.remove('h1-party');
+  });
 }
+
+// let usrlang = navigator.languages;
+// console.log(usrlang);
+
+// let userLang = navigator.language || navigator.userLanguage;
+// alert('The language is: ' + userLang);
