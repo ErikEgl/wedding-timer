@@ -40,6 +40,13 @@ body {
   -moz-animation: flux 5s linear infinite;
   -webkit-animation: flux 5s linear infinite;
   -o-animation: flux 5s linear infinite;
+  text-shadow: 
+    0 0 1vw #1041ff, 
+    0 0 3vw #1041ff, 0 0 10vw #1041ff,
+    0 0 10vw #1041ff, 
+    0 0 0.4vw #8bfdfe, 
+    0.5vw 0.5vw 0.1vw #147280;
+    color: #28d7fe;
 }
 h1 {
   font-size: 2rem;
@@ -52,6 +59,10 @@ h1 {
   animation: neon 4s ease infinite;
   -moz-animation: neon 4s ease infinite;
   -webkit-animation: neon 4s ease infinite;
+  text-shadow: 0 0 1vw #fa1c16, 0 0 3vw #fa1c16, 0 0 10vw #fa1c16,
+  0 0 10vw #fa1c16, 0 0 0.4vw #fed128, 0.5vw 0.5vw 0.1vw #806914;
+color: #fed128;
+
 }
 .eventTime {
   font-size: 2rem;
@@ -69,6 +80,8 @@ h1 {
   font-size: 2rem;
   border: 1px solid #fed128;
   box-shadow: 0 0 9vw #fa1c16, 0 0 0.4vw #fed128, 0vw 0vw 0vw #806914;
+    text-shadow: 0 0 1vw #fa1c16, 0 0 3vw #fa1c16, 0 0 10vw #fa1c16,
+  0 0 10vw #fa1c16, 0 0 0.4vw #fed128, 0.2vw 0.2vw 0.1vw #806914;
   color: #fed128;
 }
 @media only screen and (max-width: 500px) {
@@ -80,61 +93,33 @@ h1 {
 @keyframes neon {
     0%,
     100% {
-      text-shadow: 0 0 1vw #fa1c16, 0 0 3vw #fa1c16, 0 0 10vw #fa1c16,
-        0 0 10vw #fa1c16, 0 0 0.4vw #fed128, 0.5vw 0.5vw 0.1vw #806914;
+      text-shadow: 
+      0 0 1vw #fa1c16, 
+
+      0.2vw 0.2vw 0.1vw #806914;
       color: #fed128;
     }
-    /* 75% {
-      text-shadow: 0 0 0.5vw #bd1812, 0 0 1.5vw #bd1812, 0 0 5vw #bd1812,
-      0 0 7.5vw #bd1812, 0 0 0.3vw #bd1812, 0.5vw 0.5vw 0.1vw #6d5911;
-      color: #b1911c;
-    } */
     50% {
       text-shadow: 
-      0 0 0.5vw #800e0b, 
-      0 0 1.5vw #800e0b, 
-      0 0 5vw #800e0b,
-      0 0 5vw #800e0b, 
-      0 0 0.2vw #800e0b, 
-      0.5vw 0.5vw 0.1vw #40340a;
+      0 0 0.5vw #800e0b,  
+      0.2vw 0.2vw 0.1vw #40340a;
       color: #806914;
     }
-    /* 25% {
-      text-shadow: 0 0 0.5vw #5c0a08, 0 0 1.5vw #5c0a08, 0 0 5vw #5c0a08,
-      0 0 2.5vw #5c0a08, 0 0 0.1vw #5c0a08, 0.25vw 0.25vw 0.05vw  #2e2607;
-      color: #5c4b0e;
-    } */
-}
+} 
 
 @keyframes flux {
   0%,
   100% {
     text-shadow: 
     0 0 1vw #1041ff, 
-    0 0 3vw #1041ff, 0 0 10vw #1041ff,
-    0 0 10vw #1041ff, 
-    0 0 0.4vw #8bfdfe, 
-    0.5vw 0.5vw 0.1vw #147280;
+    0.25vw 0.25vw 0.15vw #147280;
     color: #28d7fe;
   }
-  /* 75% {
-    text-shadow: 0 0 0.5vw #0d2daf, 0 0 1.5vw #0d2daf, 0 0 5vw #0d2daf,
-      0 0 7.5vw #0d2daf, 0 0 0.3vw #0d2daf, 0.5vw 0.5vw 0.1vw #125f6b;
-    color: #1b91ac;
-  } */
+
   50% {
     text-shadow: 
     0 0 0.5vw #082180, 
-    0 0 1.5vw #082180, 
-    0 0 5vw #082180,
-    0 0 5vw #082180, 
-    0 0 0.2vw #082180, 
-    0.5vw 0.5vw 0.1vw #0a3940;
+    0.25vw 0.25vw 0.15vw #0a3940;
     color: #146c80;
   }
-  /* 25% {
-    text-shadow: 0 0 0.5vw #061963, 0 0 1.5vw #061963, 0 0 5vw #061963,
-      0 0 2.5vw #061963, 0 0 0.1vw #061963, 0.25vw 0.25vw 0.05vw #07292e;
-    color: #0f5261;
-  } */
-}
+} 
