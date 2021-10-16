@@ -54,9 +54,10 @@ body {
   align-items: center;
   text-align: center;
   flex-direction: column;
-
   line-height: 1.2;
-  height: 100vh;
+  height: auto;
+  padding: 30px;
+  overflow: auto;
 }
 .party {
   animation: flux 5s linear infinite;
@@ -107,10 +108,16 @@ color: var(--main-party-color2);
     text-shadow: 0 0 1vw var(--main-party-color1), 0 0 3vw var(--main-party-color1), 0 0 10vw var(--main-party-color1),
   0 0 10vw var(--main-party-color1), 0 0 0.4vw var(--main-party-color2), 0.2vw 0.2vw 0.1vw var(--main-party-color3);
   color: var(--main-party-color2);
+  line-height: 1.2;
+  padding: 15px;
 }
 @media only screen and (max-width: 500px) {
   .time-wrap {
-    padding: 10px;
+    padding: 0px;
+  }
+  body {
+    padding: 25px 10px;
+
   }
 }
 
