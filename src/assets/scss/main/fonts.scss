@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "fontad132d25bb87a05287ee248b1f309b8f";
+  
+    src: url("https://nomail.com.ua/files/eot/ad132d25bb87a05287ee248b1f309b8f.eot?#iefix")
+        format("embedded-opentype"),
+      url("https://nomail.com.ua/files/woff/ad132d25bb87a05287ee248b1f309b8f.woff")
+        format("woff"),
+      url("https://nomail.com.ua/files/woff2/ad132d25bb87a05287ee248b1f309b8f.woff2")
+        format("woff2");
+  }
+  
+  @font-face {
+    font-family: "Neoneon";
+    src: local("Neoneon"),
+      url("https://nomail.com.ua/files/woff/ad132d25bb87a05287ee248b1f309b8f.woff")
+        format("woff");
+  }
+  * {
+    font-family: "Neoneon";
+  }
+  

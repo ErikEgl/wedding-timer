@@ -1,0 +1,32 @@
+@keyframes neon {
+    0%,
+    100% {
+      text-shadow: 0 0 1vw var(--main-party-color1),
+        0 0 3vw var(--main-party-color1), 0 0 10vw var(--main-party-color1),
+        0 0 10vw var(--main-party-color1), 0 0 0.4vw var(--main-party-color2),
+        0.25vw 0.25vw 0.1vw var(--main-party-color3);
+      color: var(--main-party-color2);
+    }
+    50% {
+      text-shadow: 0 0 0.5vw var(--main-party-color4),
+        0 0 1.5vw var(--main-party-color4), 0 0 5vw var(--main-party-color4),
+        0 0 5vw var(--main-party-color4), 0 0 0.2vw var(--main-party-color4),
+        0.25vw 0.25vw 0.1vw var(--main-party-color5);
+      color: var(--main-party-color3);
+    }
+  }
+  
+  @keyframes flux {
+    0%,
+    100% {
+      text-shadow: 0 0 1vw var(--secondary-party-color1),
+        0.25vw 0.25vw 0.15vw var(--secondary-party-color3);
+      color: var(--secondary-party-color2);
+    }
+  
+    50% {
+      text-shadow: 0 0 0.5vw var(--secondary-party-color6),
+        0.25vw 0.25vw 0.15vw var(--secondary-party-color7);
+      color: var(--secondary-party-color8);
+    }
+  }
