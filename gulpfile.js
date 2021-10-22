@@ -72,7 +72,7 @@ function serve() {
   });
 
   watch('src/**/**.html', series(html)).on('change', sync.reload);
-  watch('src/assets/scss/**.scss', series(scss)).on('change', sync.reload);
+  watch('src/assets/scss/**/**.scss', series(scss)).on('change', sync.reload);
   watch('src/assets/js/**/*.js', series(js)).on('change', sync.reload);
   watch('src/assets/img/**.**', series(img)).on('change', sync.reload);
   watch('src/assets/svg/**.**', series(svg)).on('change', sync.reload);
