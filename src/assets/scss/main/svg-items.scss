@@ -1,9 +1,10 @@
 .svg {
   position: absolute;
   inset: 0;
-  display: flex;
+//   display: flex;
   flex-wrap: wrap;
   z-index: -1;
+  display: none;
 }
 
 .square {
