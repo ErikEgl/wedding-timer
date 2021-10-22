@@ -4,3 +4,5 @@
 @@include('parts/partyBtnClickEvent.js')
 @@include('parts/MobileCheckLocalStorage.js')
 @@include('parts/mobileCheck.js')
+@@include('parts/createSvgBackground.js')
+

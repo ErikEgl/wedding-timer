@@ -26,6 +26,29 @@ const wordEndSecondsC = document.querySelector('span[data-wordEnd-csecond]');
 const body = document.querySelector('body');
 const h1 = document.querySelectorAll('h1');
 
+
+const images = [
+    "bride-bouquet.svg",
+    "bride-dress-wedding.svg",
+    "gift.svg",
+    "heart-balloons.svg",
+    "stars-balloons.svg",
+    "heart2.svg",
+    "heart.svg",
+    "time.svg",
+    "wedding-day.svg",
+    "wedding-building.svg",
+    "wedding-cake.svg",
+    "wedding-arch.svg",
+    "wedding-suit.svg",
+    "ring-heart.svg",
+    "wedding.svg",
+    "bride-dress-wedding.svg",
+    "bride-bouquet.svg",
+    "wedding-ring.svg",
+    "ice-skate.svg",
+  ];
+
 function clock() {
     let currentTime = new Date();
   
@@ -93,19 +116,20 @@ function clock() {
 
   //after party btn click toggle textcontent
   const partyBtn = document.querySelector('button[data-party]');
+  partyBtn.textContent = 'Нажми для режима вечеринки';
   const partyBtnTextContent = partyBtn.textContent;
   const regularRegimeBtnTextContent = 'Нажми для обычного режима';
   function textContentToggle() {
     if (partyBtn.textContent === partyBtnTextContent ) {
-      partyBtn.innerHTML = regularRegimeBtnTextContent;
+      partyBtn.textContent = regularRegimeBtnTextContent;
     } else {
-      partyBtn.innerHTML = partyBtnTextContent;
+      partyBtn.textContent = partyBtnTextContent;
     } 
   }
  
 
   if (localStorage.getItem("visited-mobile") || localStorage.getItem("visited")) {
-    partyBtn.innerHTML = regularRegimeBtnTextContent;
+    partyBtn.textContent = regularRegimeBtnTextContent;
   }
 //after party btn click add localStorage
 function isMobileSetLocalStorage() {
@@ -213,4 +237,35 @@ function isMobile() {
   }
 }
 isMobile();
+
+const rootBody = document.querySelector(".svg");
+
+
+const SQUARES_NUMBER = 10;
+let square;
+
+    for (let i = 0; i < SQUARES_NUMBER; i++) {
+        square = document.createElement("div");
+        square.classList.add("square");
+        square.classList.add(`${'svg_' + i}`);
+        rootBody.append(square);
+      }
+
+
+
+  // let squares = document.querySelectorAll('.square')
+  // squares.forEach(square => {
+  //     console.log(square);  
+  // })
+
+  // images.forEach(svg => {
+      
+  //   // square.style.backgroundImage = `url('assets/svg/${svg}')`;
+  // })
+
+  // for (let i = 0; i < SQUARES_NUMBER; i++) {
+  //   square = document.createElement("div");
+  //   square.classList.add("square");
+  //   rootBody.append(square);
+  // }
 
