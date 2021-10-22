@@ -23,6 +23,9 @@ const wordEndMinutesC = document.querySelector('span[data-wordEnd-cminute]');
 const wordEndSecondsC = document.querySelector('span[data-wordEnd-csecond]');
 
 
+const body = document.querySelector('body');
+const h1 = document.querySelectorAll('h1');
+
 function clock() {
     let currentTime = new Date();
   
@@ -99,70 +102,123 @@ function clock() {
     }
   }
  
- //after party btn click add party styles to text
- const body = document.querySelector('body');
- const h1 = document.querySelectorAll('h1');
- partyBtn.addEventListener('click', () => {
-   if (localStorage.getItem('visited')) {
-     localStorage.removeItem('visited');
-   } else {
-     localStorage.setItem('visited', JSON.stringify(true));
-   }
-   body.classList.toggle('party');
-   h1.forEach(item => {
-     item.classList.toggle('h1-party');
-   });
-   textContentToggle();
- });
- 
-
- if (localStorage.getItem('visited')) {
-    body.classList.add('party');
-    h1.forEach(item => {
-      item.classList.add('h1-party');
-    });
+//after party btn click add localStorage
+function isMobileSetLocalStorage() {
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    ) ||
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.platform
+    )
+  ) {
+    if (localStorage.getItem("visited")) {
+      localStorage.removeItem("visited");
+    } 
+   //after party btn click set localstorage with MOBILE party styles to text
+   partyBtn.addEventListener("click", () => {
+    if (localStorage.getItem("visited-mobile")) {
+      localStorage.removeItem("visited-mobile");
+    } else {
+      localStorage.setItem("visited-mobile", JSON.stringify(true));
+    }
+    textContentToggle();
+  });
+  
   } else {
-    body.classList.remove('party');
-    h1.forEach(item => {
-      item.classList.remove('h1-party');
+    if (localStorage.getItem("visited-mobile")) {
+      localStorage.removeItem("visited-mobile");
+    } 
+    //after party btn click set localstorage with PC party styles to text
+    partyBtn.addEventListener("click", () => {
+      if (localStorage.getItem("visited")) {
+        localStorage.removeItem("visited");
+      } else {
+        localStorage.setItem("visited", JSON.stringify(true));
+      }
+      textContentToggle();
     });
   }
-  
+}
+isMobileSetLocalStorage();
+function isMobileSetLocalStorageStyle() {
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    ) ||
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.platform
+    )
+  ) {
+   //check localstorage with MOBILE party styles to apply to text
 
-  // let usrlang = navigator.languages;
-  // console.log(usrlang);
-  
-  // let userLang = navigator.language || navigator.userLanguage;
-  // alert('The language is: ' + userLang);
-  
-  
-    // const isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent.match(/Mobi/));
-  
-    // const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
-    // if (isMobile) {
-    //   body.classList.add('mobile');
-    // }
-  
-    // function isMobile () {
-    //     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-    //       (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.platform))) {
-    //         body.classList.add('party-mobile');
-    //         h1.classList.add('h1-party-mobile');
-    //         if (localStorage.getItem('visited')) {
-    //           body.classList.add('party-mobile');
-    //           h1.forEach(item => {
-    //             item.classList.add('h1-party-mobile');
-    //           });
-    //         } else {
-    //           body.classList.remove('h1-party-mobile');
-    //           h1.forEach(item => {
-    //             item.classList.remove('h1-party-mobile');
-    //           });
-    //         }
-    //       }
-    //       else {
-    //         body.classList.remove('party-mobile');
-    //         h1.classList.remove('h1-party-mobile');
-    //       };
-    //     };
-    //     isMobile()
+   if (localStorage.getItem("visited-mobile")) {
+    body.classList.add("party-mobile");
+    h1.forEach((item) => {
+      item.classList.add("h1-party-mobile");
+    });
+  } else {
+    body.classList.remove("party-mobile");
+    h1.forEach((item) => {
+      item.classList.remove("h1-party-mobile");
+    });
+  }
+  } else {
+    //check localstorage with PC party styles to apply to text
+
+    if (localStorage.getItem("visited")) {
+      body.classList.add("party");
+      h1.forEach((item) => {
+        item.classList.add("h1-party");
+      });
+    } else {
+      body.classList.remove("party");
+      h1.forEach((item) => {
+        item.classList.remove("h1-party");
+      });
+    }
+  }
+}
+isMobileSetLocalStorageStyle();
+
+// let usrlang = navigator.languages;
+// console.log(usrlang);
+
+// let userLang = navigator.language || navigator.userLanguage;
+// alert('The language is: ' + userLang);
+
+// const isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent.match(/Mobi/));
+
+// const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+// if (isMobile) {
+//   body.classList.add('mobile');
+// }
+
+function isMobile() {
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    ) ||
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.platform
+    )
+  ) {
+     //after party btn click add MOBILE party styles to text
+     partyBtn.addEventListener("click", () => {
+      body.classList.toggle("party-mobile");
+      h1.forEach((item) => {
+        item.classList.toggle("h1-party-mobile");
+      });
+    });
+  } else {
+    //after party btn click add PC party styles to text
+    partyBtn.addEventListener("click", () => {
+      body.classList.toggle("party");
+      h1.forEach((item) => {
+        item.classList.toggle("h1-party");
+      });
+    });
+  }
+}
+isMobile();
+

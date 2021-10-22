@@ -21,3 +21,7 @@ const wordEndDaysC = document.querySelector('span[data-wordEnd-cday]');
 const wordEndHoursC = document.querySelector('span[data-wordEnd-chour]');
 const wordEndMinutesC = document.querySelector('span[data-wordEnd-cminute]');
 const wordEndSecondsC = document.querySelector('span[data-wordEnd-csecond]');
+
+
+const body = document.querySelector('body');
+const h1 = document.querySelectorAll('h1');

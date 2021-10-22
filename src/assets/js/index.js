@@ -1,6 +1,6 @@
 @@include('parts/consts.js')
 @@include('parts/clock.js')
 @@include('parts/textContent.js')
-@@include('parts/partyStyles.js')
-@@include('parts/localStorage.js')
+@@include('parts/partyBtnClickEvent.js')
+@@include('parts/MobileCheckLocalStorage.js')
 @@include('parts/mobileCheck.js')
