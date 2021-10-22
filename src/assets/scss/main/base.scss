@@ -25,10 +25,9 @@ body {
   flex-direction: column;
   line-height: 1.2;
   height: auto;
-  padding: 30px;
   overflow: auto;
   @include media(500px) {
-      padding: 0;
+      padding: 30px;
   };
 }
 
@@ -39,6 +38,7 @@ h1 {
   text-align: center;
   color: var(--main-party-color2);
   text-transform: uppercase;
+  padding: 5px 0 10px;
 }
 
 
@@ -48,12 +48,12 @@ h1 {
 }
 
 .time-wrap {
-  padding: 50px;
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
-  // @include media(500px) {
-  //   padding: 10px 0;
-  // };
+  @include media(500px) {
+    padding: 50px;
+  };
 }
 
 
