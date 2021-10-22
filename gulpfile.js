@@ -8,6 +8,7 @@ const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const sync = require('browser-sync').create();
 const smartGrid = require('smart-grid');
+const sourcemaps = require('gulp-sourcemaps');
 
 function html() {
   return src('src/**.html')
@@ -26,6 +27,7 @@ function html() {
 
 function scss() {
   return src('src/assets/scss/index.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(
       autoprefixer({
@@ -34,6 +36,7 @@ function scss() {
     )
     .pipe(csso())
     .pipe(concat('index.css'))
+    .pipe(sourcemaps.write())
     .pipe(dest('dist/assets/css'));
 }
 function fonts() {

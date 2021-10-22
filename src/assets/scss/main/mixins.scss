@@ -14,6 +14,27 @@
   font-family: 'Barlow #{$f}', 'san-serif';
 }
 
+@mixin media($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin media-mm($size1, $size2) {
+  @media screen and (min-width: $size1) and (max-width: $size2) {
+    @content;
+  }
+}
+
+@mixin body-text($font: 0.875rem, $weigth: 500, $line-height: 1.5rem, $letter-spacing: 0) {
+  font-family: Rubik;
+  font-size: $font;
+  font-style: normal;
+  font-weight: $weigth;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
 :root {
   --offset: #{$offset};
   --offset_one_side: calc(#{$offset} / 2);
