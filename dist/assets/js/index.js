@@ -243,7 +243,7 @@ const rootBody = document.querySelector(".svg");
 const SQUARES_NUMBER = 45;
 let square;
 
-partyBtn.addEventListener("click", () => {
+function generateSquares() {
   if (body.classList.length && !square) {
     for (let i = 0, j = 0; i < SQUARES_NUMBER; i++, j++) {
       if (j >= images.length) {
@@ -255,21 +255,13 @@ partyBtn.addEventListener("click", () => {
       rootBody.append(square);
     }
   }
+}
+
+partyBtn.addEventListener("click", () => {
+  generateSquares()
 });
 
-// let squares = document.querySelectorAll(".square");
-
-// partyBtn.addEventListener("click", () => {
-//   if (squares) {
-//     squares.forEach((squareItem) => {
-//     //   if (body.classList.length) {
-//     //     squareItem.classList.toggle("d-none");
-//     //   }
-//     console.log(squareItem);
-//     });
-//     // console.log('squareItem');
-//   }
-// });
+generateSquares()
 
 
 
