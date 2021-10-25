@@ -257,25 +257,19 @@ partyBtn.addEventListener("click", () => {
   }
 });
 
-let squares = document.querySelectorAll(".square");
+// let squares = document.querySelectorAll(".square");
 
-partyBtn.addEventListener("click", () => {
-  if (squares) {
-    squares.forEach((squareItem) => {
-    //   if (body.classList.length) {
-    //     squareItem.classList.toggle("d-none");
-    //   }
-    console.log(squareItem);
-    });
-    // console.log('squareItem');
-  }
-});
+// partyBtn.addEventListener("click", () => {
+//   if (squares) {
+//     squares.forEach((squareItem) => {
+//     //   if (body.classList.length) {
+//     //     squareItem.classList.toggle("d-none");
+//     //   }
+//     console.log(squareItem);
+//     });
+//     // console.log('squareItem');
+//   }
+// });
 
-// else {
-
-//   squares.forEach(squareItem => {
-
-//   })
-// }
 
 

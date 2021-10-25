@@ -4,13 +4,12 @@
   flex-wrap: wrap;
   z-index: -1;
   display: flex;
-  display: none;
 }
 
 .square {
   width: 35px;
   height: 35px;
   margin: 50px;
-  filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+  filter: invert(98%) sepia(96%) saturate(5596%) hue-rotate(323deg) brightness(103%) contrast(98%);
 }
 
