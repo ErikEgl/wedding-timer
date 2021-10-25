@@ -1,6 +1,6 @@
 const rootBody = document.querySelector(".svg");
 
-const SQUARES_NUMBER = 45;
+
 let square;
 
 function generateSquares() {
@@ -16,10 +16,17 @@ function generateSquares() {
     }
   }
 }
+function deleteSquares() {
+  if (square) {
+    console.log('square');
+  }
+}
 
 partyBtn.addEventListener("click", () => {
   generateSquares()
+
 });
 
 generateSquares()
+
 
