@@ -240,7 +240,7 @@ isMobile();
 
 const rootBody = document.querySelector(".svg");
 
-const SQUARES_NUMBER = 10;
+const SQUARES_NUMBER = 45;
 let square;
 
 partyBtn.addEventListener("click", () => {
