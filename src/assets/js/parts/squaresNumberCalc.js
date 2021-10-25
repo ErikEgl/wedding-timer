@@ -5,18 +5,17 @@ let SQUARES_NUMBER
 const squareSize = squareWidth = squareHeigh = 35;
 const squareMargin = 100
 const squareSumWidth = squareSumHeigh = (squareMargin + squareSize)
-
-
 squareSumArea = squareSumWidth * squareSumHeigh
+
+
+function calcSquaresAmount() {
 windowSumArea = windowHeight * windowWidth
 SQUARES_NUMBER = Math.floor(windowSumArea / squareSumArea)
+}
+calcSquaresAmount()
 
 window.addEventListener('resize', () => {
     windowWidth = window.innerWidth
     windowHeight = window.innerHeight
-    windowSumArea = windowHeight * windowWidth
-    SQUARES_NUMBER = Math.floor(windowSumArea / squareSumArea)
-    console.log(SQUARES_NUMBER);
+    calcSquaresAmount()
 })
-
-console.log(SQUARES_NUMBER);

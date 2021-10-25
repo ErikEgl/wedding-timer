@@ -24,9 +24,13 @@ function deleteSquares() {
 
 partyBtn.addEventListener("click", () => {
   generateSquares()
-
 });
 
 generateSquares()
 
 
+if (square) {
+  window.addEventListener('resize', () => {
+    generateSquares()
+})
+}
