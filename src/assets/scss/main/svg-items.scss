@@ -1,9 +1,9 @@
 .svg {
   position: absolute;
   inset: 0;
-//   display: flex;
   flex-wrap: wrap;
   z-index: -1;
+  display: flex;
   display: none;
 }
 
@@ -11,110 +11,6 @@
   width: 35px;
   height: 35px;
   margin: 50px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
 }
 
-.svg_1,
-.svg_21,
-.svg_51 {
-  background-image: url(../svg/bride-bouquet.svg);
-}
-.svg_2,
-.svg_22,
-.svg_52 {
-  background-image: url(../svg/bride-dress-wedding.svg);
-}
-.svg_3,
-.svg_23,
-.svg_53 {
-  background-image: url(../svg/gift.svg);
-}
-.svg_4,
-.svg_24,
-.svg_54 {
-  background-image: url(../svg/heart-balloons.svg);
-}
-.svg_5,
-.svg_25,
-.svg_55 {
-  background-image: url(../svg/stars-balloons.svg);
-}
-.svg_6,
-.svg_26,
-.svg_56 {
-  background-image: url(../svg/heart2.svg);
-}
-.svg_7,
-.svg_27,
-.svg_57 {
-  background-image: url(../svg/heart.svg);
-}
-.svg_8,
-.svg_28,
-.svg_58 {
-  background-image: url(../svg/time.svg);
-}
-.svg_9,
-.svg_29,
-.svg_59 {
-  background-image: url(../svg/wedding-day.svg);
-}
-.svg_10,
-.svg_30,
-.svg_60 {
-  background-image: url(../svg/wedding-building.svg);
-}
-.svg_11,
-.svg_31,
-.svg_61 {
-  background-image: url(../svg/wedding-cake.svg);
-}
-.svg_12,
-.svg_32,
-.svg_62 {
-  background-image: url(../svg/wedding-arch.svg);
-}
-.svg_13,
-.svg_33,
-.svg_63 {
-  background-image: url(../svg/wedding-suit.svg);
-}
-.svg_14,
-.svg_34,
-.svg_64 {
-  background-image: url(../svg/ring-heart.svg);
-}
-.svg_15,
-.svg_35,
-.svg_65 {
-  background-image: url(../svg/wedding.svg);
-}
-.svg_16,
-.svg_36,
-.svg_66 {
-  background-image: url(../svg/bride-dress-wedding.svg);
-}
-.svg_17,
-.svg_37,
-.svg_67 {
-  background-image: url(../svg/bride-bouquet.svg);
-}
-.svg_18,
-.svg_38,
-.svg_68 {
-  background-image: url(../svg/wedding-ring.svg);
-}
-.svg_19,
-.svg_39,
-.svg_69 {
-  background-image: url(../svg/ice-skate.svg);
-}
-
-.svg_0,
-.svg_20,
-.svg_40,
-.svg_70 {
-  background-image: url(../svg/heart.svg);
-}

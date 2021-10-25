@@ -1,30 +1,39 @@
 const rootBody = document.querySelector(".svg");
 
-
 const SQUARES_NUMBER = 10;
 let square;
 
-    for (let i = 0; i < SQUARES_NUMBER; i++) {
-        square = document.createElement("div");
-        square.classList.add("square");
-        square.classList.add(`${'svg_' + i}`);
-        rootBody.append(square);
+partyBtn.addEventListener("click", () => {
+  if (body.classList.length && !square) {
+    for (let i = 0, j = 0; i < SQUARES_NUMBER; i++, j++) {
+      if (j >= images.length) {
+        j = 0;
       }
+      square = document.createElement("img");
+      square.classList.add("square");
+      square.setAttribute("src", `assets/svg/${images[j]}`);
+      rootBody.append(square);
+    }
+  }
+});
 
+let squares = document.querySelectorAll(".square");
 
+partyBtn.addEventListener("click", () => {
+  if (squares) {
+    squares.forEach((squareItem) => {
+    //   if (body.classList.length) {
+    //     squareItem.classList.toggle("d-none");
+    //   }
+    console.log(squareItem);
+    });
+    // console.log('squareItem');
+  }
+});
 
-  // let squares = document.querySelectorAll('.square')
-  // squares.forEach(square => {
-  //     console.log(square);  
-  // })
+// else {
 
-  // images.forEach(svg => {
-      
-  //   // square.style.backgroundImage = `url('assets/svg/${svg}')`;
-  // })
+//   squares.forEach(squareItem => {
 
-  // for (let i = 0; i < SQUARES_NUMBER; i++) {
-  //   square = document.createElement("div");
-  //   square.classList.add("square");
-  //   rootBody.append(square);
-  // }
+//   })
+// }
