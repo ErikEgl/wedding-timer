@@ -5,7 +5,7 @@ let SQUARES_NUMBER
 const jsReferenceSquare = document.querySelector('.jsReferenceSquare')
 const jsReferenceSquareNaturalSideSize = jsReferenceSquare.offsetHeight;
 let element = jsReferenceSquare.currentStyle || window.getComputedStyle(jsReferenceSquare);
-let jsReferenceSquareOneSideMargin = parseInt(element.marginTop)
+let jsReferenceSquareOneSideMargin = parseInt(element.marginTop, 10)
 let jsReferenceSquareTwoSideMargin = jsReferenceSquareOneSideMargin + jsReferenceSquareOneSideMargin
 let jsReferenceSquareMarginAndSideSum = jsReferenceSquareNaturalSideSize + jsReferenceSquareTwoSideMargin
 
