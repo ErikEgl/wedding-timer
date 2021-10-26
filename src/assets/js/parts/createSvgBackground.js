@@ -1,6 +1,5 @@
 const rootBody = document.querySelector(".svg");
 
-
 let square;
 
 function generateSquares() {
@@ -16,21 +15,31 @@ function generateSquares() {
     }
   }
 }
-function deleteSquares() {
-  if (square) {
-    console.log('square');
-  }
+
+//toggle svg squares
+function hideSquares() {
+  let squaresToHide = document.querySelectorAll(".square");
+  squaresToHide.forEach((squaresToHide) => {
+    squaresToHide.classList.toggle('d-none')
+  });
 }
 
 partyBtn.addEventListener("click", () => {
-  generateSquares()
+  if (!square) {
+    generateSquares();
+  } else {
+    hideSquares();
+  }
 });
 
-generateSquares()
-
+if (!square) {
+  generateSquares();
+} else {
+  hideSquares();
+}
 
 if (square) {
-  window.addEventListener('resize', () => {
-    generateSquares()
-})
+  window.addEventListener("resize", () => {
+    generateSquares();
+  });
 }
