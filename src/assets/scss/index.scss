@@ -1,17 +1,12 @@
-@import 'smart-grid/smart-grid';
-@import 'smart-grid/debugGrid';
-@import 'main/vars';
-@import 'main/mixins';
-@import 'main/base';
-@import 'main/fonts';
-@import 'main/keyframes';
+@import "smart-grid/smart-grid";
+@import "smart-grid/debugGrid";
+@import "main/vars";
+@import "main/mixins";
+@import "main/base";
+@import "main/fonts";
+@import "main/keyframes";
 
-
-@import 'main/party-styles/party-pc';
-@import 'main/party-styles/party-mob';
-@import 'main/party-styles/party-btn';
-@import 'main/svg-items';
-
-
-
-
+@import "main/party-styles/party-pc";
+@import "main/party-styles/party-mob";
+@import "main/party-styles/party-btn";
+@import "main/svg-items";

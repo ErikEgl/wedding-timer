@@ -5,8 +5,6 @@
   z-index: -1;
   display: flex;
 }
-$squareSideSize: 35px;
-$squareMargin: 50px;
 
 .jsReferenceSquare {
   position: absolute;
@@ -14,11 +12,51 @@ $squareMargin: 50px;
   width: $squareSideSize;
   height: $squareSideSize;
   margin: $squareMargin;
+  @include media($sm) {
+    width: $squareSideSizeSm;
+    height: $squareSideSizeSm;
+    margin: $squareMarginSm;
+  }
+  @include media($md) {
+    width: $squareSideSizeMd;
+    height: $squareSideSizeMd;
+    margin: $squareMarginMd;
+  }
+  @include media($lg) {
+    width: $squareSideSizeLg;
+    height: $squareSideSizeLg;
+    margin: $squareMarginLg;
+  }
+  @include media($xl) {
+    width: $squareSideSizeXl;
+    height: $squareSideSizeXl;
+    margin: $squareMarginXl;
+  }
 }
 .square {
   width: $squareSideSize;
   height: $squareSideSize;
   margin: $squareMargin;
+  @include media($sm) {
+    width: $squareSideSizeSm;
+    height: $squareSideSizeSm;
+    margin: $squareMarginSm;
+  }
+  @include media($md) {
+    width: $squareSideSizeMd;
+    height: $squareSideSizeMd;
+    margin: $squareMarginMd;
+  }
+  @include media($lg) {
+    width: $squareSideSizeLg;
+    height: $squareSideSizeLg;
+    margin: $squareMarginLg;
+  }
+  @include media($xl) {
+    width: $squareSideSizeXl;
+    height: $squareSideSizeXl;
+    margin: $squareMarginXl;
+  }
   filter: invert(98%) sepia(96%) saturate(5596%) hue-rotate(323deg)
     brightness(103%) contrast(98%);
 }

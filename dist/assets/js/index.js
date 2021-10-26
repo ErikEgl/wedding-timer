@@ -136,9 +136,18 @@ let windowHeight = window.innerHeight
 let windowSumArea;
 let SQUARES_NUMBER
 const jsReferenceSquare = document.querySelector('.jsReferenceSquare')
-const jsReferenceSquareNaturalSideSize = jsReferenceSquare.naturalHeight;
+const jsReferenceSquareNaturalSideSize = jsReferenceSquare.offsetHeight;
+let style = jsReferenceSquare.currentStyle || window.getComputedStyle(jsReferenceSquare);
+let jsReferenceSquareOneSideMargin = style.marginTop
 
-squareSumArea = jsReferenceSquareNaturalSideSize * jsReferenceSquareNaturalSideSize
+window.addEventListener('resize', () => {
+    jsReferenceSquare = document.querySelector('.jsReferenceSquare')
+    jsReferenceSquareNaturalSideSize = jsReferenceSquare.offsetHeight;
+    style = jsReferenceSquare.currentStyle || window.getComputedStyle(jsReferenceSquare);
+    jsReferenceSquareOneSideMargin = style.marginTop
+})
+
+let squareSumArea = jsReferenceSquareNaturalSideSize * jsReferenceSquareNaturalSideSize
 
 
 function calcSquaresAmount() {
@@ -152,6 +161,7 @@ window.addEventListener('resize', () => {
     windowHeight = window.innerHeight
     calcSquaresAmount()
 })
+
 
 //after party btn click add localStorage
 function isMobileSetLocalStorage() {
@@ -305,5 +315,7 @@ if (square) {
     generateSquares();
   });
 }
+
+
 
 
