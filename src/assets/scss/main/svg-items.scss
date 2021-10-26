@@ -5,15 +5,23 @@
   z-index: -1;
   display: flex;
 }
+$squareSideSize: 35px;
+$squareMargin: 50px;
 
+.jsReferenceSquare {
+  position: absolute;
+  left: -1000px;
+  width: $squareSideSize;
+  height: $squareSideSize;
+  margin: $squareMargin;
+}
 .square {
-  width: 35px;
-  height: 35px;
-  margin: 50px;
-  filter: invert(98%) sepia(96%) saturate(5596%) hue-rotate(323deg) brightness(103%) contrast(98%);
+  width: $squareSideSize;
+  height: $squareSideSize;
+  margin: $squareMargin;
+  filter: invert(98%) sepia(96%) saturate(5596%) hue-rotate(323deg)
+    brightness(103%) contrast(98%);
 }
 
 .svgColor {
-  
 }
-

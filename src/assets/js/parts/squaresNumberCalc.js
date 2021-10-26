@@ -2,10 +2,10 @@ let windowWidth = window.innerWidth
 let windowHeight = window.innerHeight
 let windowSumArea;
 let SQUARES_NUMBER
-const squareSize = squareWidth = squareHeigh = 35;
-const squareMargin = 100
-const squareSumWidth = squareSumHeigh = (squareMargin + squareSize)
-squareSumArea = squareSumWidth * squareSumHeigh
+const jsReferenceSquare = document.querySelector('.jsReferenceSquare')
+const jsReferenceSquareNaturalSideSize = jsReferenceSquare.naturalHeight;
+
+squareSumArea = jsReferenceSquareNaturalSideSize * jsReferenceSquareNaturalSideSize
 
 
 function calcSquaresAmount() {
