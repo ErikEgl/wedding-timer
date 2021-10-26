@@ -2,8 +2,8 @@ let windowWidth = window.innerWidth
 let windowHeight = window.innerHeight
 let windowSumArea;
 let SQUARES_NUMBER
-const jsReferenceSquare = document.querySelector('.jsReferenceSquare')
-const jsReferenceSquareNaturalSideSize = jsReferenceSquare.offsetHeight;
+let jsReferenceSquare = document.querySelector('.jsReferenceSquare')
+let jsReferenceSquareNaturalSideSize = jsReferenceSquare.offsetHeight;
 let element = jsReferenceSquare.currentStyle || window.getComputedStyle(jsReferenceSquare);
 let jsReferenceSquareOneSideMargin = parseInt(element.marginTop, 10)
 let jsReferenceSquareTwoSideMargin = jsReferenceSquareOneSideMargin + jsReferenceSquareOneSideMargin
