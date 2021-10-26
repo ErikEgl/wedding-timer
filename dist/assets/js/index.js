@@ -137,17 +137,22 @@ let windowSumArea;
 let SQUARES_NUMBER
 const jsReferenceSquare = document.querySelector('.jsReferenceSquare')
 const jsReferenceSquareNaturalSideSize = jsReferenceSquare.offsetHeight;
-let style = jsReferenceSquare.currentStyle || window.getComputedStyle(jsReferenceSquare);
-let jsReferenceSquareOneSideMargin = style.marginTop
+let element = jsReferenceSquare.currentStyle || window.getComputedStyle(jsReferenceSquare);
+let jsReferenceSquareOneSideMargin = parseInt(element.marginTop)
+let jsReferenceSquareTwoSideMargin = jsReferenceSquareOneSideMargin + jsReferenceSquareOneSideMargin
+let jsReferenceSquareMarginAndSideSum = jsReferenceSquareNaturalSideSize + jsReferenceSquareTwoSideMargin
+
 
 window.addEventListener('resize', () => {
     jsReferenceSquare = document.querySelector('.jsReferenceSquare')
     jsReferenceSquareNaturalSideSize = jsReferenceSquare.offsetHeight;
-    style = jsReferenceSquare.currentStyle || window.getComputedStyle(jsReferenceSquare);
-    jsReferenceSquareOneSideMargin = style.marginTop
+    element = jsReferenceSquare.currentStyle || window.getComputedStyle(jsReferenceSquare);
+    jsReferenceSquareOneSideMargin = element.marginTop
+    jsReferenceSquareTwoSideMargin = jsReferenceSquareOneSideMargin + jsReferenceSquareOneSideMargin
+    jsReferenceSquareMarginAndSideSum = jsReferenceSquareNaturalSideSize + jsReferenceSquareTwoSideMargin
 })
 
-let squareSumArea = jsReferenceSquareNaturalSideSize * jsReferenceSquareNaturalSideSize
+let squareSumArea = jsReferenceSquareMarginAndSideSum * jsReferenceSquareMarginAndSideSum
 
 
 function calcSquaresAmount() {
