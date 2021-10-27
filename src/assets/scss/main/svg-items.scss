@@ -58,19 +58,18 @@
     margin: $squareMarginXl;
   }
 
-  animation: glow1 5s linear infinite;
+  animation: glow1 3s cubic-bezier(0.09,-0.69, 0.74, 0.82) infinite;
     // filter: invert(18%) sepia(82%) saturate(6437%) hue-rotate(10deg) brightness(105%) contrast(106%);
   &:nth-child(3n+2) {
     // filter: invert(98%) sepia(96%) saturate(5596%) hue-rotate(323deg) brightness(103%) contrast(98%);
-  animation: glow2 5s linear infinite;
+  animation: glow2 3s cubic-bezier(0.09,-0.69, 0.74, 0.82) infinite;
 
   }
   &:nth-child(3n) {
     // filter: invert(27%) sepia(97%) saturate(918%) hue-rotate(27deg) brightness(107%) contrast(84%);
-    animation: glow3 5s linear infinite;  
+    animation: glow3 3s cubic-bezier(0.09,-0.69, 0.74, 0.82) infinite;  
 
   }
-
 }
 
 .svgColor {
