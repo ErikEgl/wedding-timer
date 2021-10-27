@@ -6,4 +6,5 @@
 @@include('parts/MobileCheckLocalStorage.js')
 @@include('parts/mobileCheck.js')
 @@include('parts/createSvgBackground.js')
+@@include('parts/howManyTimesWereOnSite.js')
 
