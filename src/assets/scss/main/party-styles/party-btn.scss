@@ -1,17 +1,16 @@
 .party-mode {
-    background-color: var(--main-main-color2);
-    color: var(--main-main-color1);
-    font-size: 2rem;
-    border: 1px solid var(--main-party-color2);
-    box-shadow: 0 0 9vw var(--main-party-color1),
-      0 0 0.4vw var(--main-party-color2), 0vw 0vw 0vw var(--main-party-color3);
-    text-shadow: 0 0 1vw var(--main-party-color1),
-      0 0 3vw var(--main-party-color1), 0 0 10vw var(--main-party-color1),
-      0 0 10vw var(--main-party-color1), 0 0 0.4vw var(--main-party-color2),
-      0.2vw 0.2vw 0.1vw var(--main-party-color3);
-    color: var(--main-party-color2);
-    line-height: 1.2;
-    padding: 15px;
-  }
-  
-  
+  z-index: 2;
+  background-color: var(--main-main-color2);
+  color: var(--main-main-color1);
+  font-size: 2rem;
+  border: 1px solid var(--main-party-color2);
+  box-shadow: 0 0 9vw var(--main-party-color1),
+    0 0 0.4vw var(--main-party-color2), 0vw 0vw 0vw var(--main-party-color3);
+  text-shadow: 0 0 1vw var(--main-party-color1),
+    0 0 3vw var(--main-party-color1), 0 0 10vw var(--main-party-color1),
+    0 0 10vw var(--main-party-color1), 0 0 0.4vw var(--main-party-color2),
+    0.2vw 0.2vw 0.1vw var(--main-party-color3);
+  color: var(--main-party-color2);
+  line-height: 1.2;
+  padding: 15px;
+}
