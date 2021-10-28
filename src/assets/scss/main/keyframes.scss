@@ -64,7 +64,19 @@
 
   }
   50% {
-    opacity: 0.6;
+    opacity: 0.65;
     filter: invert(28%) sepia(71%) saturate(820%) hue-rotate(17deg) brightness(97%) contrast(93%);
+  }
+}
+
+
+
+@keyframes dance {
+  0%,
+  100% {
+    transform: rotate3d(1, 2.0, 3.0, 360deg);
+  }
+  50% {
+    transform: rotate3d(1, 2.0, 3.0, 335deg);
   }
 }
