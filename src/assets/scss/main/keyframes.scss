@@ -63,6 +63,8 @@
     opacity: 1;
     filter: invert(27%) sepia(97%) saturate(918%) hue-rotate(27deg)
       brightness(107%) contrast(84%);
+    -webkit-filter: invert(27%) sepia(97%) saturate(918%) hue-rotate(27deg)
+      brightness(107%) contrast(84%);
   }
   50% {
     opacity: 0.65;

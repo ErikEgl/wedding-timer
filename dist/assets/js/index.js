@@ -61,8 +61,12 @@ function clock() {
     let cMonth = 11;
     let cDay = 6;
     let cHour = 12;
-    let weddingDay = new Date(wYear, wMonth, wDay, wHour);
-    let comingDay = new Date(cYear, cMonth, cDay, cHour);
+    let weddingDay
+     = new Date(wYear, wMonth, wDay, wHour);
+    let comingDay
+     = new Date(cYear, cMonth, cDay, cHour);
+
+    
   
     function msCount(msEvent, $mo, $d, $h, $mi, $s) {
       let millisecondsTillComing = msEvent - currentTime;
